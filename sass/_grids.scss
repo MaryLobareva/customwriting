@@ -2,129 +2,137 @@
 @import "susy";
 
 $susy: (
-  columns: 6,
-  gutters: 1/6,
-  container: 100%,
-  math:fluid,
-  output:float,
-  getter-position:after,
-   global-box-sizing:border-box,
+	columns: 6,
+	gutters: 1/6,
+	container: 100%,
+	math:fluid,
+	output:float,
+	getter-position:after,
+	 global-box-sizing:border-box,
 
-     debug: (
-          image: show,
-          color :rgba(#66F, .5),
-          output: background,
-          toggle: top right,
-     	)
+		 debug: (
+					image: show,
+					color :rgba(#66F, .5),
+					output: background,
+					toggle: top right,
+			)
 );
 .main-cont {
-  @include container();
-  background: #fff;
-  @media screen and (max-width: 768px) {
-    margin: 0
-  }
+	@include container();
+	background: #fff;
+	@media screen and (max-width: 768px) {
+		margin: 0
+	}
 }
 .nav-cont {
-  background:#fff;
-  @include push(0.2);
-  @include span (5.6);
-  .logo {
-    @include span(2.5);
-  } 
-   ul {
-    @include span(3.5 last);
-      }
+	background:#fff;
+	@include push(0.2);
+	@include span (5.6);
+	.logo {
+		@include span(2.5);
+	} 
+	ul {
+		@include span(3.5 last);
+	}
+	@media screen and (max-width: 768px) {
+		.logo {
+			@include span(4);
+		} 
+		ul {
+			@include span(2 last);
+		}
+	}
 }
 .img-cont {
-  @include span(6);
-  &-inside {
-    @include span(3);
-    @include push(1.5);
-    &-button {
-    @include push(1.5);
-  }
-  }
+	@include span(6);
+	&-inside {
+		@include span(3);
+		@include push(1.5);
+		&-button {
+		@include push(1.5);
+	}
+	}
 }
 .benefit-cont {
-  @include push(0.2);
-  @include span(5.6);
-  background: #fff;
-  &-item {
-    @include span(1.5);
-        @media screen and (max-width: 768px) {
-          @include span(6);
-        }
-    &:last-child {
-        @include span(1.5 last);
-        @media screen and (max-width: 768px) {
-          @include span(6);
-        }
-      }
-    }
+	@include push(0.2);
+	@include span(5.6);
+	background: #fff;
+	&-item {
+		@include span(1.5);
+				@media screen and (max-width: 768px) {
+					@include span(6);
+				}
+		&:last-child {
+				@include span(1.5 last);
+				@media screen and (max-width: 768px) {
+					@include span(6);
+				}
+			}
+		}
 }
 section.content-cont {
-  @include push(0.2);
-  @include span(5.6);
-  background: #fff;
-    article {
-      @include span(3);
-        @media screen and (max-width: 768px) {
-        @include span(6);
-        }
-         &:last-child {
-          @include span (3 last);
-          @media screen and (max-width: 768px) {
-          @include span(6 last);
-          }
-        }
-    }
+	@include push(0.2);
+	@include span(5.6);
+	background: #fff;
+		article {
+			@include span(3);
+				@media screen and (max-width: 768px) {
+				@include span(6);
+				}
+				 &:last-child {
+					@include span (3 last);
+					@media screen and (max-width: 768px) {
+					@include span(6 last);
+					}
+				}
+		}
 }
 .news-cont {
-  @include push(0.2);
-  @include span(5.6);
-  background: #fff;
-    &-item {
-      @include span(1.5);
-        @media screen and (max-width: 768px) {
-          @include span(6);
-        }
-        &:last-child{
-         @include span(1.5 last);
-          @media screen and (max-width: 768px) {
-            @include span(6 last);
-          } 
-        }
-    }
+	@include push(0.2);
+	@include span(5.6);
+	background: #fff;
+		&-item {
+			@include span(1.5);
+				@media screen and (max-width: 768px) {
+					@include span(6);
+				}
+				&:last-child{
+				 @include span(1.5 last);
+					@media screen and (max-width: 768px) {
+						@include span(6 last);
+					} 
+				}
+		}
 }
 footer {
-  @include span(6);
-  background: #3d3d3d;
-    .left-footer, .right-footer {
-      @include span(1.4);
-    }
-    .left-footer {
-      @include push(0.2);
-    }
-    .center-footer {
-       @include span(2.8);
-       ul {
-          @include span(3);
-        &:last-child {
-          @include span(3 last);
-        }
-        @media screen and (max-width: 768px){
-          @include span(6);
-        }
-       }
-    }
-    @media screen and (max-width: 768px) {
-      .left-footer, .right-footer {
-        @include span(2.8);
-        @include push(0.2);
-      .center-footer {
-          @include span(2.8 last);
-        }
+	@include span(6);
+	background: #3d3d3d;
+		.left-footer, .right-footer {
+			@include span(1.4);
+		}
+		.left-footer {
+			@include push(0.2);
+		}
+		.center-footer {
+			 @include span(2.8);
+			 ul {
+					@include span(3);
+				&:last-child {
+					@include span(3 last);
+				}
+				@media screen and (max-width: 768px){
+					@include span(6);
+				}
+			 }
+		}
+		@media screen and (max-width: 768px) {
+			.left-footer, .right-footer {
+				@include span(2.8);
+				@include push(0.2);
+			.center-footer {
+					@include span(2.8 last);
+				}
 
-      } 
-  }
+			} 
+	}
 }
